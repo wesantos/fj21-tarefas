@@ -5,6 +5,8 @@ import java.util.Calendar;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 
 public class Tarefa {
 
@@ -12,6 +14,8 @@ public class Tarefa {
 	@NotNull (message="Burro voce deve inserir algo")@Size(min=5)//melhor colocar empty
 	private String descricao;
 	private boolean finalizado;
+	
+	@DateTimeFormat (pattern="dd/MM/yyyy")
 	private Calendar dataFinalizacao;
 
 	public Long getId() {
@@ -41,6 +45,7 @@ public class Tarefa {
 	public Calendar getDataFinalizacao() {
 		return dataFinalizacao;
 	}
+
 
 	public void setDataFinalizacao(Calendar dataFinalizacao) {
 		this.dataFinalizacao = dataFinalizacao;
