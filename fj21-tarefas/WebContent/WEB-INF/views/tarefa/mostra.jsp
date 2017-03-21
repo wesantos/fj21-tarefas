@@ -26,7 +26,7 @@
 		<input type="text" name="dataFinalizacao"
 			value="<fmt:formatDate value="${tarefa.dataFinalizacao.time }"
 			pattern="dd/MM/yyyy"/>"/>
-			<br/ >
+			<br />
 			
 		<input type="submit" value="Alterar"/>
 	</form>
